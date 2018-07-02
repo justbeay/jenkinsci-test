@@ -16,10 +16,11 @@ node {
         ])
         sh "mvn clean install"
     }
-    // stage 'deploy'
-    update_commit_status('justbeay', 'jenkinsci-test', params.PULL_REQUEST_NUMBER, 'pending')
+    stage 'deploy'
+    customized_lib_test()
+    // update_commit_status('justbeay', 'jenkinsci-test', params.PULL_REQUEST_NUMBER, 'pending')
     echo "======== finish ${env.JOB_NAME}, with build number:${env.BUILD_NUMBER} ========"
-    update_commit_status('justbeay', 'jenkinsci-test', params.PULL_REQUEST_NUMBER, 'success')
+    // update_commit_status('justbeay', 'jenkinsci-test', params.PULL_REQUEST_NUMBER, 'success')
 }
 
 def update_commit_status(owner, repository, pullNumber, state) {
@@ -35,5 +36,12 @@ def update_commit_status(owner, repository, pullNumber, state) {
                 " --description 'jenkins build job:${BUILD_NUMBER} ${state}'"
                 " --context 'continuous-integration/jenkins'"
         }
+    }
+}
+
+def customized_lib_test(){
+    dir("src/script/lib"){
+        def helper = new com.github.justbeay.Helper()
+        helper.info("customized_lib_test...")
     }
 }
