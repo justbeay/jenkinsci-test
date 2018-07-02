@@ -1,6 +1,5 @@
 #!/usr/bin/env groovy
 @Library('test-shared-library')
-_
 import com.github.justbeay.Foo
 
 node {

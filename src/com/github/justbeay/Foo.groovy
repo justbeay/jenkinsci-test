@@ -16,6 +16,6 @@ class Foo{
     }
 
     String getInfo(){
-        return "\\{ serviceName: '${serviceName}', buildNumber: ${buildNumber}, buildResult: '${buildResult}' \\}"
+        return "{ serviceName: '${serviceName}', buildNumber: ${buildNumber}, buildResult: '${buildResult}' }"
     }
 }
