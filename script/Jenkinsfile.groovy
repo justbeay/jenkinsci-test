@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-// @Library('test-shared-library') import static com.github.justbeay.*
+@Library('test-shared-library') _
 
 node {
     echo "======== TRIGGER_BRANCH:${params.TRIGGER_BRANCH}, TRIGGER_Boolean:${params.TRIGGER_Boolean}, TRIGGER_Choice:${params.TRIGGER_Choice} ======="
