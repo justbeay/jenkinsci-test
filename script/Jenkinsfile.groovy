@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('my-shared-library')
+@Library('my-shared-library');
 
 node {
     echo "======== TRIGGER_BRANCH:${params.TRIGGER_BRANCH}, TRIGGER_Boolean:${params.TRIGGER_Boolean}, TRIGGER_Choice:${params.TRIGGER_Choice} ======="
