@@ -8,7 +8,7 @@ class Foo{
 
     Foo(serviceName, buildNumber){
         this.serviceName = serviceName
-        this.buildNumber = buildNumber.toInteger()
+        this.buildNumber = Integer.valueOf(buildNumber)
     }
 
     void setBuildResult(String buildResult){
