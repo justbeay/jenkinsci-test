@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
-@Library('test-shared-library') _
+@Library('test-shared-library')
+_
+import com.github.justbeay.Foo
 
 node {
     echo "======== TRIGGER_BRANCH:${params.TRIGGER_BRANCH}, TRIGGER_Boolean:${params.TRIGGER_Boolean}, TRIGGER_Choice:${params.TRIGGER_Choice} ======="
@@ -16,9 +18,11 @@ node {
             ]]
         ])
         sh "mvn clean install"
-        customized_lib_test()
     }
     stage 'deploy'
+    currentBuild.currentResult = 'SUCCESS'
+    customized_lib_test()
+    library_class_test()
     // update_commit_status('justbeay', 'jenkinsci-test', params.PULL_REQUEST_NUMBER, 'pending')
     echo "======== finish ${env.JOB_NAME}, with build number:${env.BUILD_NUMBER} ========"
     // update_commit_status('justbeay', 'jenkinsci-test', params.PULL_REQUEST_NUMBER, 'success')
@@ -40,7 +44,13 @@ def update_commit_status(owner, repository, pullNumber, state) {
     }
 }
 
-def customized_lib_test(){
+def access_steps_test(){
     def helper = new com.github.justbeay.Helper()
-    helper.info("customized_lib_test...")
+    helper.info("access_steps_test...")
+}
+
+def library_class_test(){
+    def foo = new Foo(env.JOB_NAME, env.BUILD_NUMBER)
+    foo.setBuildResult(currentBuild.currentResult)
+    echo foo.getInfo()
 }
