@@ -1,5 +1,5 @@
 #!groovy
-package com.github.justbeay
+package com.github.justbeay;
 
 def info(message) {
     sh "echo current dir is: `pwd`"
