@@ -40,7 +40,7 @@ def update_commit_status(owner, repository, pullNumber, state) {
 }
 
 def customized_lib_test(){
-    dir("src/script/lib"){
+    dir("src/script"){
         def helper = new com.github.justbeay.Helper()
         helper.info("customized_lib_test...")
     }
