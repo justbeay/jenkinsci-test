@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('my-shared-library');
+@Library('my-shared-library') import static com.github.justbeay.*
 
 node {
     echo "======== TRIGGER_BRANCH:${params.TRIGGER_BRANCH}, TRIGGER_Boolean:${params.TRIGGER_Boolean}, TRIGGER_Choice:${params.TRIGGER_Choice} ======="
@@ -41,6 +41,6 @@ def update_commit_status(owner, repository, pullNumber, state) {
 }
 
 def customized_lib_test(){
-    def helper = new com.github.justbeay.Helper()
+    def helper = new Helper()
     helper.info("customized_lib_test...")
 }
