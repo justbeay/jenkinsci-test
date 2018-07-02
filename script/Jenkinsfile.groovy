@@ -20,7 +20,7 @@ node {
         sh "mvn clean install"
     }
     stage 'deploy'
-    currentBuild.currentResult = 'SUCCESS'
+    currentBuild.result = 'SUCCESS'
     customized_lib_test()
     library_class_test()
     // update_commit_status('justbeay', 'jenkinsci-test', params.PULL_REQUEST_NUMBER, 'pending')
