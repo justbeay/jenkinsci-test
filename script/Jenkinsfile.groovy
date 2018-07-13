@@ -52,4 +52,5 @@ def library_class_test(){
     def foo = new Foo(env.JOB_NAME, env.BUILD_NUMBER)
     foo.setBuildResult(currentBuild.currentResult)
     echo foo.getInfo()
+    foo.test()
 }
