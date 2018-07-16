@@ -46,9 +46,6 @@ def update_commit_status(owner, repository, pullNumber, state) {
 def access_steps_test(){
     def helper = new com.github.justbeay.Helper()
     helper.info("access_steps_test...")
-    helper.testAaa()
-    def helper1 = new com.github.justbeay.Helper()
-    helper1.testAaa()
 }
 
 def library_class_test(){

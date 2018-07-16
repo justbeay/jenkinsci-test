@@ -1,15 +1,14 @@
 #!groovy
 package com.github.justbeay;
 
-def aaa = "hello"
+def test() {
+    return "hello, world..."
+}
 
 def info(message) {
     sh "echo current dir is: `pwd`"
     echo "INFO: ${message}"
-}
-
-def testAaa() {
-    echo "== aaa: ${this.aaa} =="
+    echo test()
 }
 
 return this
