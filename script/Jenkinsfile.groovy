@@ -47,6 +47,8 @@ def access_steps_test(){
     def helper = new com.github.justbeay.Helper()
     helper.info("access_steps_test...")
     helper.testAaa()
+    helper.aaa = "changed"
+    helper.testAaa()
     def helper1 = new com.github.justbeay.Helper()
     helper1.testAaa()
 }
