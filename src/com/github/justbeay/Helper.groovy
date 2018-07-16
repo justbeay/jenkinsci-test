@@ -9,7 +9,7 @@ def info(message) {
 }
 
 def testAaa() {
-    echo "== aaa: ${aaa} =="
+    echo "== aaa: ${this.aaa} =="
 }
 
 return this
