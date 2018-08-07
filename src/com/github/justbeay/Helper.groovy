@@ -13,8 +13,8 @@ def info(message) {
 
 // def adict = null
 def setValue(key, value) {
-    if(!this.metaClass.adict) {
-        this.metaClass.adict = [:]
+    if(!this.adict) {
+        this.adict = [:]
     }
     this.adict[key] = value
 }
