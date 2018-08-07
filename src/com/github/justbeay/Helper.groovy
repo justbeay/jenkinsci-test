@@ -13,10 +13,10 @@ def info(message) {
 
 def var1 = 'init'
 def setVar1(value) {
-    var1 = value
+    this.var1 = value
 }
 def getVar1() {
-    return var1
+    return this.var1
 }
 
 return this
