@@ -11,12 +11,15 @@ def info(message) {
     echo test()
 }
 
-def adict = {}
-def setName(value) {
-    adict['name'] = value
+def adict
+def setValue(key, value) {
+    if(!adict) {
+        adict = [:]
+    }
+    adict[key] = value
 }
-def getName() {
-    return adict['name']
+def getName(key) {
+    return adict[key]
 }
 
 return this
