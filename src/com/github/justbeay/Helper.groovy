@@ -11,4 +11,6 @@ def info(message) {
     echo test()
 }
 
+def var1 = 'init'
+
 return this
