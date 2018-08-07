@@ -11,12 +11,12 @@ def info(message) {
     echo test()
 }
 
-def var1 = 'init'
-def setVar1(value) {
-    var1 = value
+def adict = [ name: "hello" ]
+def setName(value) {
+    adict['name'] = value
 }
-def getVar1() {
-    return var1
+def getName() {
+    return adict['name']
 }
 
 return this
