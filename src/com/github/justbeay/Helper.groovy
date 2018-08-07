@@ -11,9 +11,9 @@ def info(message) {
     echo test()
 }
 
-def adict = null
+// def adict = null
 def setValue(key, value) {
-    if(!binding.hasVariable("adict")) {
+    if(!this.hasProperty("adict")) {
         def adict = [:]
     }
     adict[key] = value
