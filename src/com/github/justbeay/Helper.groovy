@@ -18,7 +18,7 @@ def setValue(key, value) {
     }
     adict[key] = value
 }
-def getName(key) {
+def getValue(key) {
     return adict[key]
 }
 
