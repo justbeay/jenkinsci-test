@@ -14,12 +14,12 @@ def info(message) {
 // def adict = null
 def setValue(key, value) {
     if(!this.hasProperty("adict")) {
-        def adict = [:]
+        this.adict = [:]
     }
-    adict[key] = value
+    this.adict[key] = value
 }
 def getValue(key) {
-    return adict[key]
+    return this.adict[key]
 }
 
 return this
