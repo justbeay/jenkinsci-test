@@ -11,7 +11,7 @@ def info(message) {
     echo test()
 }
 
-def adict = [ name: "hello" ]
+def adict = {}
 def setName(value) {
     adict['name'] = value
 }
