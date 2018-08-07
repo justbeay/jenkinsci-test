@@ -11,7 +11,7 @@ def info(message) {
     echo test()
 }
 
-def adict
+def adict = null
 def setValue(key, value) {
     if(!adict) {
         adict = [:]
