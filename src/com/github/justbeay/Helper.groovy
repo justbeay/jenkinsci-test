@@ -13,8 +13,8 @@ def info(message) {
 
 def adict = null
 def setValue(key, value) {
-    if(!adict) {
-        adict = [:]
+    if(!binding.hasVariable("adict")) {
+        def adict = [:]
     }
     adict[key] = value
 }
