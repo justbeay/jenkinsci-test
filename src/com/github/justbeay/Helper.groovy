@@ -21,7 +21,7 @@ def info(message) {
 // def getValue(key) {
 //     return this.adict[key]
 // }
-def var1 = 'init'
+// def var1 = 'init'
 def setValue(value) {
     var1 = value
 }
