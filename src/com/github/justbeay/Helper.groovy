@@ -13,7 +13,7 @@ def info(message) {
 
 // def adict = null
 def setValue(key, value) {
-    if(!adict) {
+    if(!this.hasProperty("adict")) {
         adict = [:]
     }
     adict[key] = value
