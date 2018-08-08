@@ -1,6 +1,10 @@
 #!groovy
 package com.github.justbeay;
 
+Helper() {
+    adict = [:]
+}
+
 def test() {
     return "hello, world..."
 }
@@ -13,10 +17,10 @@ def info(message) {
 
 // def adict = null
 def setValue(key, value) {
-    if(!binding.hasVariable("adict")) {
-        echo "========== init..."
-        adict = [:]
-    }
+    // if(!binding.hasVariable("adict")) {
+    //     echo "========== init..."
+    //     adict = [:]
+    // }
     adict[key] = value
 }
 def getValue(key) {
