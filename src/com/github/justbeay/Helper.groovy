@@ -1,7 +1,7 @@
 #!groovy
 package com.github.justbeay;
 
-Helper() {
+def Helper() {
     adict = [:]
 }
 
