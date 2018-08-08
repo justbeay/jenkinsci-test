@@ -14,6 +14,7 @@ def info(message) {
 // def adict = null
 def setValue(key, value) {
     if(!this.hasProperty("adict")) {
+        echo "========== init..."
         adict = [:]
     }
     adict[key] = value
