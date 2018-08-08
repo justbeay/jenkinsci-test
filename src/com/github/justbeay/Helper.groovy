@@ -26,7 +26,7 @@ def setValue(value) {
     var1 = value
 }
 def getValue() {
-    return var1
+    return this.var1
 }
 
 return this
